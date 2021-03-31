@@ -5,7 +5,7 @@
  * version 2.0 (the "License"); you may not use this file except in compliance
  * with the License. You may obtain a copy of the License at:
  *
- *   http://www.apache.org/licenses/LICENSE-2.0
+ *   https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
@@ -471,6 +471,10 @@ final class SslUtils {
     static boolean isTLSv13Cipher(String cipher) {
         // See https://tools.ietf.org/html/rfc8446#appendix-B.4
         return TLSV13_CIPHERS.contains(cipher);
+    }
+
+    static boolean isEmpty(Object[] arr) {
+        return arr == null || arr.length == 0;
     }
 
     private SslUtils() {
